@@ -1,4 +1,6 @@
-import lotr.Hobbit;
+import lotr.characters.Hobbit;
+import lotr.characters.Character;
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -20,7 +22,7 @@ public class HobbitTest {
 
     @Test
     public void testIsClass() {
-        assertTrue(character instanceof lotr.Character);
+        assertTrue(character instanceof Character);
     }
 
     @Test

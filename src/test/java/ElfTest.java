@@ -3,6 +3,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+import lotr.characters.Character;
+import lotr.characters.Elf;
+import lotr.characters.Hobbit;
+
 public class ElfTest {
     private Character character;
 

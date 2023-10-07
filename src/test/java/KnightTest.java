@@ -3,6 +3,9 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
+import lotr.characters.Character;
+import lotr.characters.Knight;
+
 public class KnightTest {
     private Character character;
 
