@@ -33,3 +33,20 @@ Implement the heroes game in text mode
    - methods: Character createCharacter() { returns random instance of any existing character } 
 - class GameManager
    - methods: void fight(Character c1, Character c2) { to provide fight between to characters and explain via command line what happens during fight, till both of the characters are alive } 
+
+
+## Quick Report
+
+- How setHp should behave, when hp < 0?
+   - `setHp` should set hp to 0.
+- What type of pattern is used in CharacterFactory?
+   - **Static factory** method pattern.
+- Refactor code to remove code duplication in King and Knight
+   - Created `King` and `Knight` subclasses of `Noble`.
+- Propose a solution to separate characters and their kick strategies to allow easier creation of new characters in the future.
+   - Created `KickStrategy` interface.
+- How did you implement createCharacter? Can we improve code and extract subclasses Character on a flight? Use reflections.
+   - Implemented `createCharacter` using reflection.
+   - `Character` subclasses are extracted on a flight from `lotr.characters` using reflection.
+- Include tests and check your solution with them.
+   - Included tests from and added own test file for `CharacterFactory`;
