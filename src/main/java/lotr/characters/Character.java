@@ -1,19 +1,21 @@
 package lotr.characters;
 
+import lotr.kick.KickStrategy;
+
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.Setter;
 
-
-@Getter
+@AllArgsConstructor
+@Getter @Setter
 public abstract class Character {
     private int hp;
     private int power;
-    
-    public Character(int hp, int power) {
-	    this.hp = hp;
-	    this.power = power;
-    }
+    private KickStrategy kickStrategy;
 
-    public abstract void kick(Character chr);
+    public void kick(Character opponent) {
+        kickStrategy.kick(this, opponent);
+    }
     
     public boolean isAlive() {
 	    return hp > 0;
